@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity | NationalFlagQuiz</title>
+  <style>
+    body {
+      text-align: center;
+      padding: 0;
+      border: 0;
+      margin: 0;
+      background-color: #000000;
+    }
+
+    #unity-canvas {
+      background: #231F20;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="unity-canvas" width=144 height=312 tabindex="-1"></canvas>
+  <script src="Build/webbuild.loader.js"></script>
+  <script>
+    function setCanvasSize() {
+      var canvas = document.querySelector("#unity-canvas");
+      var windowHeight = window.innerHeight;
+      var windowWidth = window.innerHeight * 0.5; // 縦幅の0.5倍
+      canvas.style.width = windowWidth + "px";
+      canvas.style.height = windowHeight + "px";
+    }
+
+    setCanvasSize();
+
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+      dataUrl: "Build/webbuild.data.unityweb",
+      frameworkUrl: "Build/webbuild.framework.js.unityweb",
+      codeUrl: "Build/webbuild.wasm.unityweb",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "SK",
+      productName: "NationalFlagQuiz",
+      productVersion: "1.0",
+      // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+      // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+    });
+  </script>
+</body>
+
+</html>
