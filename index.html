@@ -4,21 +4,21 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Unity | NationalFlagQuiz</title>
-  <style>
-    body {
-      text-align: center;
-      padding: 0;
-      border: 0;
-      margin: 0;
-      background-color: #000000;
-    }
-
-    #unity-canvas {
-      background: #231F20;
-    }
-  </style>
+  <title>Unity | 英語・国旗ゲーム</title>
 </head>
+<style>
+  body {
+    text-align: center;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: #000000;
+  }
+
+  #unity-canvas {
+    background: #231F20;
+  }
+</style>
 
 <body>
   <canvas id="unity-canvas" width=144 height=312 tabindex="-1"></canvas>
@@ -34,13 +34,14 @@
 
     setCanvasSize();
 
+
     createUnityInstance(document.querySelector("#unity-canvas"), {
       dataUrl: "Build/webbuild.data.unityweb",
       frameworkUrl: "Build/webbuild.framework.js.unityweb",
       codeUrl: "Build/webbuild.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "SK",
-      productName: "NationalFlagQuiz",
+      productName: "EWNFQ",
       productVersion: "1.0",
       // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
       // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
